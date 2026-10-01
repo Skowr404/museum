@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  
+
+  <!-- ===== ОСНОВНАЯ ШАПКА ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <!-- Логотип -->
+      <a href="#" class="logo">
+        <div class="logo__icon">И</div>
+        <div class="logo__text">
+          <span class="logo__title">Историко-краеведческий музей</span>
+          <span class="logo__subtitle">МБОУ "Средняя школа №1"</span>
+        </div>
+      </a>
+
+      <!-- Меню -->
+      <nav class="nav">
+
+        <!-- Простой пункт -->
+
+        <div class="nav__item">
+  <a href="#museum" class="nav__link">Музей</a>
+</div>
+
+        <div class="nav__item">
+          <a href="#visitors" class="nav__link">Посетителям</a>
+        </div>
+
+        
+
+
+        <!-- Пункт с выпадающим меню -->
+        <div class="nav__item">
+          <button class="nav__link">
+            Экспозиции
+            <span class="nav__arrow"></span>
+          </button>
+          <div class="dropdown">
+            <a href="#history" class="dropdown__link">История школы</a>
+            <a href="#hero" class="dropdown__link">Его имя носит школа</a>
+            <a href="#byt" class="dropdown__link">Быт</a>
+          </div>
+        </div>
+
+        <!-- Простой пункт -->
+
+        
+        <!-- Ещё с выпадающим -->
+        <div class="nav__item">
+          <button class="nav__link">
+            События
+            <span class="nav__arrow"></span>
+          </button>
+          <div class="dropdown">
+            <a href="#awards" class="dropdown__link">Результаты деятельности</a>
+            <a href="#visitors__gallery" class="dropdown__link">Галерея</a>
+          </div>
+        </div>
+
+       <!-- <div class="nav__item">
+  <a href="#museum" class="nav__link">Видеоэкскурсии</a>
+</div> -->
+
+
+
+      </nav>
+
+      <!-- Правая часть -->
+      <div class="header__actions">
+        <button class="icon-btn" title="Поиск">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+   
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+    <!-- ===== СВАЙПЕР-ВЕРНИСАЖ ===== -->
+<section class="gallery">
+  <div class="gallery__header">
+   
+  </div>
+
+  <div class="swiper" id="swiper">
+    <div class="swiper__track" id="swiperTrack">
+
+      <!-- Слайд 1 -->
+      <div class="swiper__slide">
+        <div class="swiper__image" style="background-image: url('isxod/But/_cSe7x7dONk.jpg')">
+          <span class="swiper__number">01</span>
+        </div>
+        <div class="swiper__info">
+          <h3 class="swiper__name"></h3>
+          <p class="swiper__meta"></p>
+        </div>
+      </div>
+
+      <!-- Слайд 2 -->
+      <div class="swiper__slide">
+        <div class="swiper__image" style="background-image: url('isxod/HisNameShool/stendSterena.jpg')">
+          <span class="swiper__number">02</span>
+        </div>
+        <div class="swiper__info">
+          <h3 class="swiper__name"></h3>
+          <p class="swiper__meta"></p>
+        </div>
+      </div>
+
+      <!-- Слайд 3 -->
+      <div class="swiper__slide">
+        <div class="swiper__image" style="background-image: url('isxod/GallERmussems/VistvKAMUSSS.jpg');">
+          <span class="swiper__number">03</span>
+        </div>
+        <div class="swiper__info">
+          <h3 class="swiper__name"></h3>
+          <p class="swiper__meta"></p>
+        </div>
+      </div>
+
+      <!-- Слайд 4 -->
+      <div class="swiper__slide">
+        <div class="swiper__image" style="background-image: url('isxod/But/ExcMuss2.jpg');">
+          <span class="swiper__number">04</span>
+        </div>
+        <div class="swiper__info">
+          <h3 class="swiper__name"></h3>
+          <p class="swiper__meta"></p>
+        </div>
+      </div>
+
+      <!-- Слайд 5 -->
+      <div class="swiper__slide">
+        <div class="swiper__image" style="background-image: url('isxod/historuShol/KartHistShool.jpg');">
+          <span class="swiper__number">05</span>
+        </div>
+        <div class="swiper__info">
+          <h3 class="swiper__name"></h3>
+          <p class="swiper__meta"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Стрелки -->
+    <button class="swiper__arrow swiper__arrow--prev" id="swiperPrev" aria-label="Назад">
+      <svg viewBox="0 0 24 24"><polyline points="15 5 8 12 15 19"></polyline></svg>
+    </button>
+    <button class="swiper__arrow swiper__arrow--next" id="swiperNext" aria-label="Вперёд">
+      <svg viewBox="0 0 24 24"><polyline points="9 5 16 12 9 19"></polyline></svg>
+    </button>
+
+    <!-- Прогресс-бар вместо точек -->
+    <div class="swiper__progress" id="swiperProgress">
+      <div class="swiper__progress-bar" id="swiperProgressBar"></div>
+    </div>
+
+    <!-- Счётчик -->
+    <div class="swiper__counter">
+      <span class="swiper__counter-current" id="swiperCurrent">01</span>
+      <span class="swiper__counter-divider">/</span>
+      <span class="swiper__counter-total" id="swiperTotal">05</span>
+    </div>
+
+
+  </div>
+</section>
+
+
+<!-- ===== РАЗДЕЛ "ШКОЛЬНЫЙ МУЗЕЙ" ===== -->
+<section class="museum" id="museum">
+  
+
+
+  <!-- ===== Главный заголовок главы ===== -->
+  <div class="museum__header">
+    <span class="museum__label">Наш музей</span>
+    <h2 class="museum__title">Школьный краеведческий музей</h2>
+    <p class="museum__lead">
+      Отдельный кабинет на втором этаже главного корпуса школы — здесь
+      хранится память о прошлом, живёт настоящее и рождается интерес к истории.
+    </p>
+  </div>
+
+  <!-- ===== Подраздел 1: О музее ===== -->
+  <div class="museum__block">
+    <div class="museum__block-header">
+      <span class="museum__num">01</span>
+      <h3 class="museum__subtitle">О музее</h3>
+    </div>
+
+    <div class="museum__block-body">
+      <p>
+        Музей расположен в отдельном кабинете на втором этаже главного корпуса школы.
+        Помещение имеет естественное освещение (два окна) и искусственное освещение,
+        центральное отопление. Экспонаты размещены на стендах и в витринах.
+      </p>
+
+      <div class="museum__features">
+        <div class="museum__feature">
+          <span class="museum__feature-icon">
+            <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <span>Отдельный кабинет</span>
+        </div>
+        <div class="museum__feature">
+          <span class="museum__feature-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 5v14" stroke="currentColor" stroke-width="1.8"/></svg>
+          </span>
+          <span>Два окна, естественный свет</span>
+        </div>
+        <div class="museum__feature">
+          <span class="museum__feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <span>Искусственное освещение</span>
+        </div>
+        <div class="museum__feature">
+          <span class="museum__feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 20V9l7-5 7 5v11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </span>
+          <span>Центральное отопление</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Подраздел 2: Цель ===== -->
+  <div class="museum__block">
+    <div class="museum__block-header">
+      <span class="museum__num">02</span>
+      <h3 class="museum__subtitle">Цель деятельности</h3>
+    </div>
+
+    <div class="museum__block-body">
+      <p>
+        Содействие формированию интереса к отечественной истории и уважительного
+        отношения к нравственным ценностям прошлых поколений, развитие
+        коммуникативных компетенций и навыков исследовательской работы учащихся,
+        поддержка творческих способностей детей.
+      </p>
+
+      <div class="museum__goals">
+        <div class="museum__goal">
+          <h4>Память</h4>
+          <p>Бережно храним историю и передаём её новым поколениям</p>
+        </div>
+        <div class="museum__goal">
+          <h4>Исследование</h4>
+          <p>Развиваем навыки научной и поисковой работы у школьников</p>
+        </div>
+        <div class="museum__goal">
+          <h4>Творчество</h4>
+          <p>Поддерживаем инициативу и раскрываем способности детей</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Подраздел 3: История музея ===== -->
+  <div class="museum__block museum__block--highlight">
+    <div class="museum__block-header">
+      <span class="museum__num">03</span>
+      <h3 class="museum__subtitle">История основания</h3>
+    </div>
+
+    <div class="museum__block-body">
+      <div class="museum__history-grid">
+
+        <div class="museum__history-item">
+          <span class="museum__history-year">1967</span>
+          <h4>Год основания</h4>
+          <p>Музей был основан в 1967 году. Первым руководителем стала Глазова Людмила Андреевна.</p>
+        </div>
+
+        <div class="museum__history-item">
+          <span class="museum__history-year">1967</span>
+          <h4>Первые экспонаты</h4>
+          <p>Первыми экспонатами стали предметы, собранные в ходе этнографических экспедиций: крестьянская утварь, одежда, рушники.</p>
+        </div>
+
+        <div class="museum__history-item">
+          <span class="museum__history-year">Экспозиция</span>
+          <h4>Быт и традиции</h4>
+          <p>Самовар, утюг, прялка и другие предметы — не только украшение музея, но и наглядное пособие на уроках истории и музейных «путешествиях» в века минувшие.</p>
+        </div>
+
+        <div class="museum__history-item">
+          <span class="museum__history-year">Сегодня</span>
+          <h4>Общими усилиями</h4>
+          <p>Фонд музея собирается силами учащихся, учителей и добрых друзей школы — и продолжает расти.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Мини-CTA ===== -->
+  <div class="museum__cta">
+    <h3 class="museum__cta-title">Приходите в наш музей</h3>
+    <p class="museum__cta-text">
+      Экскурсии проводятся для учащихся, гостей школы и всех, кому интересна история родного края.
+    </p>
+    <a href="#visitors" class="museum__cta-btn">Записаться на экскурсию</a>
+  </div>
+
+</section>
+
+
+
+<!-- ===== РАЗДЕЛ "ПОСЕТИТЕЛЯМ" ===== -->
+<section class="visitors" id="visitors">
+
+  <!-- Заголовок раздела -->
+  <div class="visitors__header">
+    <span class="visitors__label">Раздел</span>
+    <h2 class="visitors__title">Посетителям</h2>
+    <p class="visitors__lead">
+      Всё, что нужно знать перед визитом: часы работы, билеты и маршруты.
+      Мы постарались сделать ваш поход в музей простым и приятным.
+    </p>
+  </div>
+
+  <!-- ===== Блок 1: О музее ===== -->
+  <div class="visitors__intro">
+    <div class="visitors__intro-text">
+      <span class="visitors__label">О музее</span>
+      <h3 class="visitors__subtitle">Школьный краеведческий музей</h3>
+      <p>
+        Наш музей располагается в отдельном кабинете на втором этаже главного
+        корпуса школы. Помещение имеет естественное освещение (два окна)
+        и искусственное освещение, центральное отопление. Экспонаты размещены
+        на стендах и в витринах.
+      </p>
+      <p>
+        Целью деятельности школьного музея является содействие формированию
+        интереса к отечественной истории и уважительного отношения
+        к нравственным ценностям прошлых поколений, развитие коммуникативных
+        компетенций, навыков исследовательской работы учащихся, поддержка
+        творческих способностей детей.
+      </p>
+      <p>
+        Музей основан в 1967 году, первым руководителем была Глазова Людмила
+        Андреевна. Первыми экспонатами стали предметы, собранные в ходе
+        этнографических экспедиций: крестьянская утварь, одежда, рушники.
+        Экспозиция «Быт» — самовар, утюг, прялка и другие предметы — не только
+        украшение музея, но и наглядное пособие при проведении уроков истории
+        и музейных «путешествий» в века минувшие. Собирается силами учащихся,
+        учителей и добрых друзей школы.
+      </p>
+      <a href="#museum" class="visitors__link">
+        Узнать больше о музее
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="visitors__intro-image">
+      <div class="visitors__quote">
+        <span class="visitors__quote-mark">“</span>
+        <p>Искусство — это зеркало, в котором каждый видит себя настоящего.</p>
+        <span class="visitors__quote-author">— Основатель музея</span>
+      </div>
+    </div>
+  </div>
+
+   <!-- ===== Блок 3: Наши экспозиции ===== -->
+  <div class="visitors__highlights">
+    <div class="visitors__highlights-header">
+      <span class="visitors__label">Экспозиции музея</span>
+      <h3 class="visitors__subtitle">Что можно увидеть в нашем музее</h3>
+    </div>
+
+    <div class="visitors__highlights-grid">
+      <div class="visitors__highlight">
+        <span class="visitors__highlight-num">01</span>
+        <h5>Зал «Быт»</h5>
+        <p>Предметы крестьянской утвари Смоленского края: самовар, утюг, прялка, национальные костюмы.</p>
+      </div>
+      <div class="visitors__highlight">
+        <span class="visitors__highlight-num">02</span>
+        <h5>История школы</h5>
+        <p>Об основании школы, её знаменитых выпускниках и важных событиях школьной жизни.</p>
+      </div>
+      <div class="visitors__highlight">
+        <span class="visitors__highlight-num">03</span>
+        <h5>Великая Отечественная война</h5>
+        <p>Стенды о Рославле в годы войны, учителях и выпускниках, ушедших на фронт.</p>
+      </div>
+      <div class="visitors__highlight">
+        <span class="visitors__highlight-num">04</span>
+        <h5>Его имя носит школа</h5>
+        <p>Экспозиция о Герое Советского Союза Ефиме Ильиче Стерине — выпускнике школы.</p>
+      </div>
+    </div>
+  </div>
+
+  
+<!-- ===== Блок: Документы музея ===== -->
+  <div class="visitors__docs">
+    <div class="visitors__docs-header">
+      <span class="visitors__label">Официальный статус</span>
+      <h3 class="visitors__subtitle">Документы музея</h3>
+      <p class="visitors__docs-lead">
+        Наш музей официально зарегистрирован и внесён в реестры школьных музеев
+        Российской Федерации.
+      </p>
+    </div>
+
+    <div class="visitors__docs-grid">
+
+      <!-- Документ 1 -->
+      <a href="isxod/DocsMusemss/5218 SertRegMuss.pdf" target="_blank" class="visitors__doc">
+        <div class="visitors__doc-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M14 2v6h6M9 13h6M9 17h4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="visitors__doc-body">
+          <span class="visitors__doc-num">№ 5218</span>
+          <h4>Сертификат о регистрации</h4>
+          <p>Портал школьных музеев РФ</p>
+        </div>
+        <span class="visitors__doc-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <!-- Документ 2 -->
+      <a href="isxod/DocsMusemss/RestrShoolMusemm.pdf" target="_blank" class="visitors__doc">
+        <div class="visitors__doc-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M14 2v6h6M9 13h6M9 17h4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="visitors__doc-body">
+          <span class="visitors__doc-num">№ 24-1863529427</span>
+          <h4>Сертификат о включении в Реестр</h4>
+          <p>Музеи образовательных организаций, 2024</p>
+        </div>
+        <span class="visitors__doc-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <!-- Документ 3 -->
+      <a href="isxod/DocsMusemss/YchetKartMusem.pdf" target="_blank" class="visitors__doc">
+        <div class="visitors__doc-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="15" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M3 9h18M7 13h5M7 16h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="visitors__doc-body">
+          <span class="visitors__doc-num">Свид. № 5218</span>
+          <h4>Учётная карточка музея</h4>
+          <p>Основные сведения и фонды</p>
+        </div>
+        <span class="visitors__doc-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <!-- Документ 4 -->
+      <a href="isxod/DocsMusemss/AktObsledMusemss.jpg" target="_blank" class="visitors__doc">
+        <div class="visitors__doc-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 3h6l2 3h3v15H4V6h3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="visitors__doc-body">
+          <span class="visitors__doc-num">2023</span>
+          <h4>Акт обследования музея</h4>
+          <p>Подтверждение статуса «Школьный музей»</p>
+        </div>
+        <span class="visitors__doc-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <!-- Документ 5 -->
+      <a href="isxod/DocsMusemss/RykovidMusemss.pdf" target="_blank" class="visitors__doc">
+        <div class="visitors__doc-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="visitors__doc-body">
+          <span class="visitors__doc-num">Приказ</span>
+          <h4>О назначении руководителя</h4>
+          <p>Васильева Е. И.</p>
+        </div>
+        <span class="visitors__doc-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <!-- Документ 6 -->
+      <a href="isxod/ContacttiiMusiem/KontiktiiMuisamss.docx" target="_blank" class="visitors__doc">
+        <div class="visitors__doc-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <div class="visitors__doc-body">
+          <span class="visitors__doc-num">Контакты</span>
+          <h4>Как с нами связаться</h4>
+          <p>Адрес, телефон, email</p>
+        </div>
+        <span class="visitors__doc-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </div>
+
+
+
+  <!-- ===== Блок 5: Призыв ===== -->
+  <div class="visitors__cta">
+    <div class="visitors__cta-inner">
+      <h3 class="visitors__cta-title">Мы ждём вас в гости</h3>
+      <p class="visitors__cta-text">
+        Приходите в любой удобный день. Искусство не терпит спешки —
+        а хороший музей всегда найдёт, чем вас удивить.
+      </p>
+      <div class="visitors__cta-actions">
+        
+        <a href="#" class="visitors__btn visitors__btn--outline">Спланировать визит</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ===== РАЗДЕЛ "ИСТОРИЯ ШКОЛЫ" ===== -->
+<section class="history" id="history">
+
+  <div class="history__header">
+    <span class="history__label">Экспозиция музея</span>
+    <h2 class="history__title">История школы</h2>
+    <p class="history__lead">
+      Экспозиция рассказывает об открытии школы, предвоенном времени,
+      годах Великой Отечественной войны, послевоенном периоде
+      и истории современного здания.
+    </p>
+  </div>
+
+  <!-- ===== Таймлайн истории ===== -->
+  <div class="history__timeline">
+
+    <div class="history__item">
+      <div class="history__dot"></div>
+      <div class="history__content">
+        <span class="history__year">Открытие</span>
+        <h3>Начало пути</h3>
+        <p>Школа открыла двери для первых учеников, став центром образования и культуры для всего района.</p>
+      </div>
+    </div>
+
+    <div class="history__item">
+      <div class="history__dot"></div>
+      <div class="history__content">
+        <span class="history__year">Предвоенное время</span>
+        <h3>Годы становления</h3>
+        <p>Школа росла, крепла и готовила поколения выпускников, которым предстояло пройти тяжёлые испытания.</p>
+      </div>
+    </div>
+
+    <div class="history__item">
+      <div class="history__dot"></div>
+      <div class="history__content">
+        <span class="history__year">1941 — 1945</span>
+        <h3>В годы войны</h3>
+        <p>Учителя и выпускники ушли на фронт. В стенах школы продолжалась работа — здесь помогали фронту и ждали своих героев.</p>
+      </div>
+    </div>
+
+    <div class="history__item">
+      <div class="history__dot"></div>
+      <div class="history__content">
+        <span class="history__year">После войны</span>
+        <h3>Возрождение</h3>
+        <p>Школа восстановилась, вернулась к мирной жизни и вновь открыла двери для детей. Появились новые традиции и достижения.</p>
+      </div>
+    </div>
+
+    <div class="history__item">
+      <div class="history__dot"></div>
+      <div class="history__content">
+        <span class="history__year">Наши дни</span>
+        <h3>Современное здание</h3>
+        <p>Сегодня школа — это современное пространство с музеем, где бережно хранится память о прошлом и живёт настоящее.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== Фотогалерея музея ===== -->
+  <div class="history__gallery">
+    <div class="history__gallery-header">
+      <span class="history__label">Музей школы</span>
+      <h3 class="history__subtitle">Экспозиция в фотографиях</h3>
+    </div>
+
+    <div class="history__photos">
+
+      <figure class="history__photo">
+        <div class="history__photo-img" style="background-image: url('isxod/historuShol/ObshWidKompMuz.jpg');"></div>
+        <figcaption>Общий вид экспозиции</figcaption>
+      </figure>
+
+      <figure class="history__photo">
+        <div class="history__photo-img" style="background-image: url('isxod/historuShol/NagradaShool.jpg');"></div>
+        <figcaption>Витрины с наградами и реликвиями</figcaption>
+      </figure>
+
+      <figure class="history__photo">
+        <div class="history__photo-img" style="background-image: url('isxod/historuShol/KartHistShool.jpg');"></div>
+        <figcaption>Стенды с историей школы</figcaption>
+      </figure>
+
+      <figure class="history__photo">
+        <div class="history__photo-img" style="background-image: url('isxod/historuShol/DirectShool.jpg');"></div>
+        <figcaption>Директора школы</figcaption>
+      </figure>
+
+      <figure class="history__photo">
+        <div class="history__photo-img" style="background-image: url('isxod/historuShol/herosholstar.jpg');"></div>
+        <figcaption>Память о защитниках Родины</figcaption>
+      </figure>
+
+      <figure class="history__photo">
+        <div class="history__photo-img" style="background-image: url('isxod/historuShol/GordostSkool.jpg');"></div>
+        <figcaption>Мы гордимся вами</figcaption>
+      </figure>
+
+    </div>
+  </div>
+
+  <!-- ===== Краткая справка ===== -->
+  <div class="history__facts">
+    <div class="history__fact">
+      <span class="history__fact-num">1856</span>
+      <p>Год основания — начало большой истории</p>
+    </div>
+    <div class="history__fact">
+      <span class="history__fact-num">80+</span>
+      <p>Лет школьной летописи</p>
+    </div>
+    <div class="history__fact">
+      <span class="history__fact-num">1000+</span>
+      <p>Выпускников за все годы</p>
+    </div>
+    <div class="history__fact">
+      <span class="history__fact-num">1</span>
+      <p>Школьный музей с подлинными экспонатами</p>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- ===== РАЗДЕЛ "ЕГО ИМЯ НОСИТ ШКОЛА" ===== -->
+<section class="hero" id="hero">
+
+  <!-- Главный заголовок по центру -->
+  <div class="hero__header">
+    <span class="hero__label">Герой Советского Союза</span>
+    <h2 class="hero__title">Его имя носит школа</h2>
+    <p class="hero__lead">
+      Экспозиция рассказывает о Герое Советского Союза, бывшем ученике школы —
+      Ефиме Ильиче Стерине. В школе чтят память о нём, и каждый год в феврале
+      проходит традиционная Стеринская неделя.
+    </p>
+  </div>
+
+  <!-- Основной блок: портрет + текст -->
+  <div class="hero__intro">
+
+    <div class="hero__portrait">
+      <div class="hero__photo" style="background-image: url('isxod/HisNameShool/PortretSterin.jpg');">
+        <span class="hero__star">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" fill="currentColor"/></svg>
+        </span>
+      </div>
+      <div class="hero__caption">
+        <h4>Ефим Ильич Стерин</h4>
+        <p>Герой Советского Союза<br>Выпускник школы</p>
+      </div>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__lead-text">
+        В музее хранится портрет героя, копии его личного дела, анкеты,
+        вырезки из фронтовых газет и его письмо родителям с фронта.
+      </p>
+
+      <div class="hero__features">
+        <div class="hero__feature">
+          <div class="hero__feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <div>
+            <h5>Портрет и личное дело</h5>
+            <p>Подлинные документы и копии из архива</p>
+          </div>
+        </div>
+
+        <div class="hero__feature">
+          <div class="hero__feature-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10M7 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h5>Фронтовые газеты</h5>
+            <p>Вырезки из газет военных лет и анкеты</p>
+          </div>
+        </div>
+
+        <div class="hero__feature">
+          <div class="hero__feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 6l9 6 9-6M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h5>Письмо с фронта</h5>
+            <p>Послание родителям, написанное с передовой</p>
+          </div>
+        </div>
+
+        <div class="hero__feature">
+          <div class="hero__feature-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h5>Стеринская неделя</h5>
+            <p>Традиция школы — каждый февраль</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__quote">
+        <span class="hero__quote-mark">“</span>
+        <p>Никто не забыт, ничто не забыто — его имя живёт в стенах родной школы.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Галерея экспонатов -->
+  <div class="hero__gallery">
+    <div class="hero__gallery-header">
+      <span class="hero__label">Экспозиция</span>
+      <h3 class="hero__gallery-title">Экспонаты музея</h3>
+    </div>
+
+    <div class="hero__gallery-grid">
+      <figure class="hero__item">
+        <div class="hero__item-img" style="background-image: url('isxod/HisNameShool/stendSterena.jpg');"></div>
+        <figcaption>Стенд экспозиции</figcaption>
+      </figure>
+
+      <figure class="hero__item">
+        <div class="hero__item-img" style="background-image: url('isxod/HisNameShool/StenddSrerin.jpg');"></div>
+        <figcaption>Документы и газеты</figcaption>
+      </figure>
+
+      <figure class="hero__item">
+        <div class="hero__item-img" style="background-image: url('isxod/HisNameShool/YchebSteren.jpg');"></div>
+        <figcaption>Учебник Стерина</figcaption>
+      </figure>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ===== РАЗДЕЛ "БЫТ" ===== -->
+<section class="byt" id="byt">
+
+  <!-- Заголовок раздела -->
+  <div class="byt__header">
+    <span class="byt__label">Экспозиция музея</span>
+    <h2 class="byt__title">Быт Смоленского края</h2>
+    <p class="byt__lead">
+      Экспозиция знакомит с предметами старины и традициями крестьянской
+      жизни. Здесь оживают вещи, которыми пользовались наши прабабушки
+      и прадедушки.
+    </p>
+  </div>
+
+  <!-- Основной блок: текст + фото -->
+  <div class="byt__intro">
+
+    <div class="byt__intro-text">
+      <span class="byt__label">О экспозиции</span>
+      <h3 class="byt__subtitle">Вещи старого быта</h3>
+      <p>
+        Посетители экспозиции познакомятся с предметами старины: половиками,
+        рушниками ручной работы, вязаной скатертью и салфетками, вышивками,
+        старинными кружевами.
+      </p>
+      <p>
+        Отдельное место занимают орудия труда и предметы домашнего хозяйства:
+        прялки и прялки-самопрялки с колесом и педалью, гребни-чесала для шерсти,
+        глиняные крынки, кадка для теста, колотовка, хлебная лопата, чугунки,
+        ухват и самовары.
+      </p>
+      <p>
+        Всё это — не только украшение музея, но и наглядное пособие на уроках
+        истории, литературы и музейных «путешествиях» в века минувшие.
+      </p>
+    </div>
+
+    <div class="byt__intro-photo" style="background-image: url('isxod/But/_cSe7x7dONk.jpg');">
+      <span class="byt__photo-caption">Экспозиция «Быт»</span>
+    </div>
+
+  </div>
+
+  <!-- ===== Что можно увидеть ===== -->
+  <div class="byt__showcase">
+    <div class="byt__showcase-header">
+      <span class="byt__label">Экспонаты</span>
+      <h3 class="byt__subtitle">Что можно увидеть</h3>
+    </div>
+
+    <div class="byt__showcase-grid">
+
+      <!-- 1. Ткани и вышивка -->
+      <div class="byt__card">
+        <div class="byt__card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16v12H4z"/>
+            <path d="M4 10h16M4 14h16M9 6v12M15 6v12"/>
+          </svg>
+        </div>
+        <h4 class="byt__card-title">Ткани и вышивка</h4>
+        <ul class="byt__card-list">
+          <li>Половики</li>
+          <li>Рушники ручной работы</li>
+          <li>Вязаные скатерти и салфетки</li>
+          <li>Старинные кружева</li>
+        </ul>
+      </div>
+
+      <!-- 2. Прядение и шерсть -->
+      <div class="byt__card">
+        <div class="byt__card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="8"/>
+            <path d="M12 4v16M4 12h16M6.5 6.5l11 11M17.5 6.5l-11 11"/>
+          </svg>
+        </div>
+        <h4 class="byt__card-title">Прядение и шерсть</h4>
+        <ul class="byt__card-list">
+          <li>Прялки</li>
+          <li>Прялки-самопрялки с колесом и педалью</li>
+          <li>Гребни-чесала для шерсти</li>
+        </ul>
+      </div>
+
+      <!-- 3. Посуда и утварь -->
+      <div class="byt__card">
+        <div class="byt__card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 4h10l-1 5a4 4 0 0 1-4 4 4 4 0 0 1-4-4z"/>
+            <path d="M9 13v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-6"/>
+          </svg>
+        </div>
+        <h4 class="byt__card-title">Посуда и утварь</h4>
+        <ul class="byt__card-list">
+          <li>Глиняные крынки</li>
+          <li>Кадка для теста</li>
+          <li>Колотовка</li>
+          <li>Хлебная лопата</li>
+        </ul>
+      </div>
+
+      <!-- 4. Печь и самовары -->
+      <div class="byt__card">
+        <div class="byt__card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 20V9a5 5 0 0 1 10 0v11"/>
+            <path d="M5 13h10"/>
+            <path d="M15 8h4v6h-4z"/>
+          </svg>
+        </div>
+        <h4 class="byt__card-title">Печь и самовары</h4>
+        <ul class="byt__card-list">
+          <li>Чугунки</li>
+          <li>Ухват</li>
+          <li>Самовары</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== Фотогалерея ===== -->
+  <div class="byt__gallery">
+    <div class="byt__gallery-header">
+      <span class="byt__label">Фотогалерея</span>
+      <h3 class="byt__subtitle">Экспозиция в фотографиях</h3>
+    </div>
+
+    <div class="byt__gallery-grid">
+      <figure class="byt__photo">
+        <div class="byt__photo-img" style="background-image: url('isxod/But/_cSe7x7dONk.jpg');"></div>
+        <figcaption>Общий вид экспозиции</figcaption>
+      </figure>
+
+      <figure class="byt__photo">
+        <div class="byt__photo-img" style="background-image: url('isxod/But/MatuxaMusExcr.jpg');"></div>
+        <figcaption>Экскурсия на тему "Быт"</figcaption>
+      </figure>
+
+      <figure class="byt__photo">
+        <div class="byt__photo-img" style="background-image: url('isxod/But/ExkursMuss.jpg');"></div>
+        <figcaption>Экскурсия на тему "Быт"</figcaption>
+      </figure>
+
+      <figure class="byt__photo">
+        <div class="byt__photo-img" style="background-image: url('isxod/But/SamovariMuss.jpg');"></div>
+        <figcaption>Самовары и чугунки</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ===== CTA ===== -->
+  <div class="byt__cta">
+    <h3 class="byt__cta-title">Хотите увидеть всё своими глазами?</h3>
+    <p class="byt__cta-text">
+      Запишитесь на экскурсию — мы расскажем историю каждой вещи и покажем,
+      как жили наши предки.
+    </p>
+    <a href="tel:+79190400046" class="byt__cta-btn">Записаться на экскурсию</a>
+  </div>
+
+</section>
+
+
+<!-- ===== РАЗДЕЛ "НАШИ ДОСТИЖЕНИЯ" ===== -->
+<section class="awards" id="awards">
+
+  <div class="awards__header">
+    <span class="awards__label">Гордость музея</span>
+    <h2 class="awards__title">Наши достижения</h2>
+    <p class="awards__lead">
+      Ученики и педагоги школы — активные участники конкурсов, конференций
+      и исследовательских проектов. Мы гордимся каждой наградой и каждым
+      достижением нашего музея.
+    </p>
+  </div>
+
+  <!-- ===== Категории достижений ===== -->
+  <div class="awards__categories">
+
+    <div class="awards__cat">
+      <div class="awards__cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="9" r="6"/>
+          <path d="M8.5 14L7 22l5-3 5 3-1.5-8"/>
+        </svg>
+      </div>
+      <span class="awards__cat-num">8</span>
+      <h4>Дипломов</h4>
+      <p>За победы в конкурсах и проектах</p>
+    </div>
+
+    <div class="awards__cat">
+      <div class="awards__cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/>
+          <path d="M14 2v6h6M9 13h6M9 17h4"/>
+        </svg>
+      </div>
+      <span class="awards__cat-num">5</span>
+      <h4>Сертификатов</h4>
+      <p>За участие в конференциях и выставках</p>
+    </div>
+
+    <div class="awards__cat">
+      <div class="awards__cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/>
+        </svg>
+      </div>
+      <span class="awards__cat-num">3</span>
+      <h4>Победы</h4>
+      <p>Всероссийского и регионального уровня</p>
+    </div>
+
+    <div class="awards__cat">
+      <div class="awards__cat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3 2"/>
+        </svg>
+      </div>
+      <span class="awards__cat-num">2024—2026</span>
+      <h4>Годы активности</h4>
+      <p>И это только начало</p>
+    </div>
+
+  </div>
+
+  <!-- ===== Сетка наград ===== -->
+  <div class="awards__gallery">
+    <div class="awards__gallery-header">
+      <span class="awards__label">Награды</span>
+      <h3 class="awards__subtitle">Грамоты, дипломы и сертификаты</h3>
+    </div>
+
+    <div class="awards__grid">
+
+  <!-- 1. Диплом III «Без срока давности» -->
+  <figure class="awards__item">
+    <div class="awards__img" style="background-image: url('isxod/ResultDeatelMusem/Step3MussKonk.png');">
+      <span class="awards__medal awards__medal--3">III</span>
+    </div>
+    <figcaption>
+      <h5>Диплом III степени</h5>
+      <p>Всероссийский конкурс «Без срока давности», 2024</p>
+    </figcaption>
+  </figure>
+
+  <!-- 2. Сертификат «Весна Победы» -->
+  <figure class="awards__item">
+    <div class="awards__img" style="background-image: url('isxod/ResultDeatelMusem/VesnaPobediMusemss.png');">
+      <span class="awards__medal awards__medal--cert">★</span>
+    </div>
+    <figcaption>
+      <h5>Сертификат участника</h5>
+      <p>Региональная выставка «Весна Победы», 2025</p>
+    </figcaption>
+  </figure>
+
+  <!-- 3. Диплом II «Лучшая музейная экскурсия» -->
+  <figure class="awards__item">
+    <div class="awards__img" style="background-image: url('isxod/ResultDeatelMusem/2StepMusemss.png');">
+      <span class="awards__medal awards__medal--2">II</span>
+    </div>
+    <figcaption>
+      <h5>Диплом II степени</h5>
+      <p>Лучшая музейная экскурсия к 81-й годовщине Победы, 2026</p>
+    </figcaption>
+  </figure>
+
+  <!-- 4. Диплом I «Весна Победы» -->
+  <figure class="awards__item">
+    <div class="awards__img" style="background-image: url('isxod/ResultDeatelMusem/vesna-pobedy-1.jpg');">
+      <span class="awards__medal awards__medal--1">I</span>
+    </div>
+    <figcaption>
+      <h5>Диплом I степени</h5>
+      <p>Международный фестиваль «Весна Победы», 2025</p>
+    </figcaption>
+  </figure>
+
+  <!-- 5. Диплом «Музейный час» -->
+  <figure class="awards__item">
+    <div class="awards__img" style="background-image: url('isxod/ResultDeatelMusem/muzejnyj-chas.PNG');">
+      <span class="awards__medal awards__medal--win">🏆</span>
+    </div>
+    <figcaption>
+      <h5>Диплом победителя</h5>
+      <p>Всероссийский проект «Музейный час», 2024</p>
+    </figcaption>
+  </figure>
+
+ 
+
+  <!-- 7. Сертификат Исторического квиза -->
+  <figure class="awards__item">
+    <div class="awards__img" style="background-image: url('isxod/ResultDeatelMusem/istoricheskij-kviz.png');">
+      <span class="awards__medal awards__medal--cert">★</span>
+    </div>
+    <figcaption>
+      <h5>Сертификат участника</h5>
+      <p>Всероссийский исторический квиз, 2026</p>
+    </figcaption>
+  </figure>
+
+</div>
+
+  <!-- ===== CTA ===== -->
+  <div class="awards__cta">
+    <h3 class="awards__cta-title">Хотите стать частью нашей истории?</h3>
+    <p class="awards__cta-text">
+      Присоединяйтесь к исследовательской работе музея — участвуйте в конкурсах,
+      проектах и экскурсиях.
+    </p>
+    <a href="tel:+79190400046" class="awards__cta-btn">Связаться с нами</a>
+  </div>
+
+</section>
+
+
+ <!-- ===== Блок: Галерея экскурсий ===== -->
+  <div class="visitors__gallery" id="visitors__gallery">
+    <div class="visitors__gallery-header">
+      <span class="visitors__label">Галерея</span>
+      <h3 class="visitors__subtitle">Как проходят наши экскурсии</h3>
+      <p class="visitors__gallery-lead">
+        Занятия, мастер-классы и живые встречи с историей.
+      </p>
+    </div>
+
+    <div class="visitors__gallery-grid">
+
+      <figure class="visitors__gallery-item">
+        <div class="visitors__gallery-img" style="background-image: url('isxod/But/ExkursMuss.jpg');"></div>
+        <figcaption>Экскурсия по экспозиции «Быт»</figcaption>
+      </figure>
+
+      <figure class="visitors__gallery-item">
+        <div class="visitors__gallery-img" style="background-image: url('isxod/But/PlatyaMuss.jpg');"></div>
+        <figcaption>Мастер-класс по народным нарядам</figcaption>
+      </figure>
+
+      <figure class="visitors__gallery-item">
+        <div class="visitors__gallery-img" style="background-image: url('isxod/But/Exxcursssmuss.jpg');"></div>
+        <figcaption>Знакомство с костюмами и рушниками</figcaption>
+      </figure>
+
+    <!--  <figure class="visitors__gallery-item">
+  <div class="visitors__gallery-img">
+    <video controls preload="metadata" muted>
+      <source src="isxod/VidooExcrussMusemss/SrtelovvMussss.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+  <figcaption>Мы гордимся нашими героями</figcaption>
+</figure>
+
+
+    <figure class="visitors__gallery-item">
+  <div class="visitors__gallery-img">
+    <video controls preload="metadata" muted>
+      <source src="isxod/VidooExcrussMusemss/SterinExcurs.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+  <figcaption>Стенд «Его имя носит школа»</figcaption>
+</figure>
+
+     <figure class="visitors__gallery-item">
+  <div class="visitors__gallery-img">
+    <video controls preload="metadata" muted>
+      <source src="isxod/VidooExcrussMusemss/Strelvaaaaa.mov" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+  <figcaption>Стрелова Антонина,выпускница школы во время Великой Отечественной Войны</figcaption>
+</figure>
+
+<figure class="visitors__gallery-item">
+  <div class="visitors__gallery-img">
+    <video controls preload="metadata" muted>
+      <source src="isxod/VidooExcrussMusemss/YchitVOVMUSSS.mov" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+  <figcaption>Учителя Великой Отечественной Войны</figcaption>
+</figure>
+
+<figure class="visitors__gallery-item">
+  <div class="visitors__gallery-img">
+    <video controls preload="metadata" muted>
+      <source src="isxod/VidooExcrussMusemss/DylaggMussem.mov" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+  <figcaption>Дулаг</figcaption>
+</figure>  -->
+
+    </div>
+  </div>
+
+
+<!-- ===== ПОДВАЛ ===== -->
+<footer class="footer">
+
+  <!-- Верхняя часть: колонки -->
+  <div class="footer__top">
+
+    <!-- Колонка 1: бренд -->
+    <div class="footer__col footer__col--brand">
+      <a href="#" class="footer__logo">
+        <div class="footer__logo-icon">И</div>
+        <div class="footer__logo-text">
+          <span class="footer__logo-title">Историко-краеведческий музей</span>
+          <span class="footer__logo-subtitle">МБОУ "Средняя школа №1"</span>
+        </div>
+      </a>
+      
+
+      <!-- Соцсети -->
+      <div class="footer__socials">
+        <a href="#" class="footer__social" aria-label="Telegram">
+          <svg viewBox="0 0 24 24"><path d="M21.5 4.5L2.5 11.5l5 2 1.5 6 3.5-4 5 3.5z"/></svg>
+        </a>
+        <a href="#" class="footer__social" aria-label="VK">
+          <svg viewBox="0 0 24 24"><path d="M13 17c-5 0-8-4-8-9h2.5c0 3.5 2 6 3.5 6.5V8H13v4c1.5-.3 2.8-2 3.3-4H19c-.5 2-1.8 3.7-3.3 4.5 1.5.7 3 2.3 3.8 4.5h-2.7c-.7-2-1.8-3.2-3.3-3.5V17z"/></svg>
+        </a>
+        <a href="#" class="footer__social" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M10 15V9l5 3-5 3z"/><rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+        <a href="#" class="footer__social" aria-label="Дзен">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v6l6 3-6 3v6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Колонка 2: Разделы -->
+    <div class="footer__col">
+      <h4 class="footer__heading">Разделы</h4>
+      <ul class="footer__list">
+        <li><a href="#visitors">Посетителям</a></li>
+        <li><a href="#history">История школы</a></li>
+        <li><a href="#hero">Его имя носит школа</a></li>
+        <li><a href="#byt">Быт</a></li>
+        <li><a href="#visitors__gallery">Галерея</a></li>
+      </ul>
+    </div>
+
+
+
+    <!-- Колонка 3: Посетителям -->
+    <div class="footer__col">
+      <h4 class="footer__heading">Посетителям</h4>
+      <ul class="footer__list">
+     
+        <li><a href="#">Часы работы</a></li>
+
+        <li><a href="#">Экскурсии</a></li>
+
+        <li><a href="#">Доступная среда</a></li>
+
+        <li><a href="#">Правила посещения</a></li>
+      </ul>
+    </div>
+
+    <!-- Колонка 4: Контакты + подписка -->
+    <div class="footer__col footer__col--contacts">
+      <h4 class="footer__heading">Контакты</h4>
+
+      <address class="footer__address">
+        <p> ул. Советская, дом 94-а.</p>
+      </address>
+
+      <a href="tel:+79190400046" class="footer__phone">+7 (919) 040-00-46</a>
+<a href="mailto:nora-alena@yandex.ru" class="footer__email">nora-alena@yandex.ru</a>
+<a href="tel:+74813464043" class="footer__phone">(48134) 6-40-43</a>
+<a href="mailto:schoolsterin@yandex.ru" class="footer__email">schoolsterin@yandex.ru</a>
+
+      <!-- Подписка -->
+      <form class="footer__subscribe" onsubmit="event.preventDefault(); this.classList.add('sent');">
+        <input type="email" placeholder="Ваш email" required>
+        <button type="submit" aria-label="Подписаться">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+      <p class="footer__subscribe-note">Подпишитесь на новости и анонсы выставок</p>
+    </div>
+
+  </div>
+
+  <!-- Разделительная линия -->
+  <div class="footer__divider"></div>
+
+  <!-- Нижняя часть: копирайт + ссылки -->
+  <div class="footer__bottom">
+    <p class="footer__copyright">
+      © Историко-краеведческий музей
+    </p>
+
+    <ul class="footer__legal">
+      <li><a href="#">Правовая информация</a></li>
+      <li><a href="#">Политика конфиденциальности</a></li>
+      <li><a href="#">Использование Cookie</a></li>
+    </ul>
+
+    <a href="#" class="footer__up" aria-label="Наверх">
+      <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Наверх</span>
+    </a>
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
